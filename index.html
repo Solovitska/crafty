@@ -4,125 +4,782 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/craft/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
+    <title>Vyshyvanka-my</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.css"
+      integrity="sha512-gA2Bvu0/hw4oj0Lp8ZHjK+o3S4BE5m8d/wNVy6ktKLhHKPpWLQwv9ixzuWirWOakoJqlBdePq2NhoCaUOQ5npQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+      <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
     <script type="module" crossorigin src="/craft/index.js"></script>
-    <link rel="stylesheet" crossorigin href="/craft/assets/styles-DvPDDfy5.css">
+    <link rel="stylesheet" crossorigin href="/craft/assets/index-DolrrIao.css">
   </head>
   <body>
-    <header class="header">
-  <div class="container">
-    <nav class="nav">
-      <a class="nav-logo" href="./index.html" aria-label="Site logo">
-        <svg class="nav-logo-icon" width="100" height="30">
-          <use href="/craft/assets/sprite-E8vg0sBb.svg#logo"></use>
-        </svg>
+    <header class="header" id="header">
+  <div class="header__navbar container">
+    <nav class="header__navigation">
+      <a class="header__logo-link" href="index.html">
+        <img
+          class="header__logo"
+          src="/craft/assets/solo-UwTRQxpI.png"
+          alt="logotype icon"
+          width="80"
+          height="60"
+        />
       </a>
-      <ul class="nav-list">
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-act}" href="./page-2.html">Page 2</a>
+      <ul class="header__menu">
+        <li class="header__menu-item">
+          <a class="header__menu-link" href="#about-us">about us</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-curr}" href="./page-3.html">Page 3</a>
+        <li class="header__menu-item">
+          <a class="header__menu-link" href="#our-collection">our collection</a>
+        </li>
+        <li class="header__menu-item">
+          <a class="header__menu-link" href="#your-order">customer order</a>
+        </li>
+        <li class="header__menu-item">
+          <a class="header__menu-link" href="#testimonials">testimonials</a>
         </li>
       </ul>
     </nav>
+    <address class="header__address">
+      <a class="header__contact-link" href="tel:+380990092096"
+        >+380 (99) 009-20-96</a
+      >
+    </address>
+
+    <div class="header__mobile-menu">
+      <button
+        class="header__mobile-menu-btn"
+        id="open-menu"
+        type="button"
+        data-modal-open
+      >
+        <svg
+          class="header__mobile-menu-icon"
+          width="38"
+          height="18"
+          aria-label="mobile menu open icon"
+        >
+          <use href="/craft/assets/icons-Y6GMIRD5.svg#nav-btn-icon"></use>
+        </svg>
+      </button>
+    </div>
   </div>
 </header>
 
+<div id="menu-backdrop" class="menu-backdrop">
+  <div class="container menu-container" id="mobil-menu">
+    <button id="close-menu" type="button" class="close-menu-button">
+      <svg class="close-menu-icon">
+        <use href="/craft/assets/icons-Y6GMIRD5.svg#close-icon"></use>
+      </svg>
+    </button>
+    <div class="menu-elements-cont">
+      <a class="menu-phone uppercase" href="tel:+380990092096"
+        >+380 (99) 009-20-96</a
+      >
+      <ul class="menu-nav-list">
+        <li class="menu-nav-item">
+          <a class="menu-nav-link" href="#about-us">about me</a>
+        </li>
+        <li class="menu-nav-item">
+          <a class="menu-nav-link" href="#our-collection">my work</a>
+        </li>
+        <li class="menu-nav-item">
+          <a class="menu-nav-link" href="#your-order">customer order</a>
+        </li>
+        <li class="menu-nav-item">
+          <a class="menu-nav-link" href="#testimonials"></a>
+        </li>
+      </ul>
+      <div class="menu-ornament-cont"></div>
+    </div>
+  </div>
+</div>
+
 
     <main>
-      <!-- Loads the specified .html file -->
-      <section class="vite-promo">
+      <section class="hero">
   <div class="container">
-    <div class="vite-promo-thumb">
-      <a
-        class="vite-promo-link"
-        href="https://vitejs.dev/"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Link to Vite official website"
-        title="Vite.js  build tool"
-      >
-        <!-- Path to images as from index.html file -->
+    <div class="hero-box">
+      <div class="hero-main" data-aos="fade-up" data-aos-duration="1500">
+        <h1 class="hero-title">
+          Embroidery is more than just art to me. <span class="ukrainian">Each stitch reflects emotions,
+          </span><br> and every piece carries a unique story.
+        </h1>
+
+      </div>
+      <div class="hero-star-box">
         <img
-          class="pic"
-          src="/craft/assets/vite-logo-9o_aqrTe.png"
-          alt="Vite logo"
-          width="640"
-          height="640"
+          class="star"
+          srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADEAAAAxCAMAAABEQrEuAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAJcEhZcwAACxMAAAsTAQCanBgAAAByUExURUdwTOrYee/Xd+zZeefXd+3aet/PcOvZeevXd+/PcOvXd+/fgO3ZeevYeOzZeezZeezaee3aeerXeO3beurYeOzXeOzZeezYeOraeuvZeeraderZeezYeOnZee3YeOvYeOzXeOzZeevZee3aeuzaeuzZeWm2oqkAAAAldFJOUwBwIM8gbxDfQBCAEN+Q76+/j2B/kGBfvzDPMKCfUN+woKCAn583cFRTAAABV0lEQVQYGZXBh3KrMABFwQMIJNHc7fS8kvv/vxiBE8JM0CB2iTjqyibeynoSlP88o5OkmpE/lcS1so4gV9DnBM6qJU7BCXjWYAf+oIA4DezTq+4uzmrgiTFaZoh50DLDL56R0zLHwHsmuVTsz6U7aNnBXc67VvJ8a3olMUw6pXjhh1MKx8xe6wrmMq27MtdoHXO+1LrM88WU+15J9mUOlK22sBk7bVNgrLawBkyhdI8VQfNXqf5U3NVK0zFRGiYHpTlx5/8r1Ycn8I9KV+SQW21hcwpt805mtcVbBpjypiT9rTR8qTKtyyrmtM4zd9S6jLlC6/bMOKVw/HhWio5JriS951sjve3OF9dpWefK862QDJOqYuC0zDGq+MVo2RMxRssMMY0G1h119/pgNSBOQVfBToMXoFZAXCvrCEyvwBA4q5a4rK4Y1ZJqRk2dkaCxshWbHHVl2SeJLNUKuvpL/wAAAABJRU5ErkJggg== 1x, data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGIAAABiCAMAAACce/Y8AAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAB4UExURUdwTOvXd+zaee/PcOfXd+rYee/Xd+vZeevXd+zZee3aeu3ZeezZeeraeu/fgOzZeezYeOradezZeerYeOrXeOzZeezYeOrXeOzXeOzaeu3bet/PcOvZeevYeOrZeenZeezYe+3YeO/aeu3aeezXeOzZee3aeuzZeWLmqK4AAAAndFJOUwCAvxAgcCDfQO9v31AwEK+/MM+QYF+foGCffxDPkKBQT98wj6Cgn5SZpHAAAALZSURBVBgZtcGJsqI6FAXQDQROwiDO4x273+v9/3/YikpFhVsd6mQtBPp0UiOqQkiXIaYPnv1GRAU7C2hZWDxp2UnxxBaYZE1KAd+aNxa+X29kjilSnh3hEd4IPCXPlpii4oUUuDuyl+CuSHlRYQrHqyOuCmHPZbgqHTsVpuBdWuDig57fuChS3mGCGXtuA6DgAwugdOxlCGfoOVgrfCDWpvQYhGsYxCCcZRCLcDWDfCHcnkH2CJczSI5/kNkFPAmDJPAYm2FAISSXbVIv0FkySIqLbLFPDpUjJcOrnL1luipTBjqUq7ZiL8crS1VfGOCoSDAkoaINhswc9RgMaqlmi2GWaixGpFQiGJNTyQZjZo4qXIZR71SxxThLFQY/qKigwg8Kqigwxh4dVUi5wKusXjkqkkOdwWPK1FFfWi7QsauK0cjBAmtGtsGOkW2RM7INkDCqBGc5I8rRqR0jcZ+4aYRRSIOeEUYgBh4jVPdm8GDWUtn8hGf/U9V/eDWjKoNXBVVlePWHqg54lqVU1mZ4ULxRnRTwFMIIpEDvlzAKWeDm0zESV6NTMqIcZ0dGdQTWjCzHjpFtsWZkG8DuhNF8ryw6TTmnPjcvDTyneidU5Fb1Ca+aUqjCJRZjDFUY/KCiggo/KKjCYtwHVbxj1MxRhcswZk0lOcYIlaQYYanGYtgH1bQYVFCPyzBkTUUJhggVOQyoqcriVc7ed7sqdww0L1fzJXs5Xs2EdN/bZN+ccJEyyBKdpk7aJUkxGHCyBp6EQRJ4GnvCP8gZJEe4PYPsEa5mkC+EswxiEc4wyALhDD1za4UPxNodPQbhZuy5HIDlAwNg7djLMAHv5gYX7/RscWFS3mGKih2X42rm2BODq4RXDlNUvJgb3CXsJbgzwosKUyx5lsMjvBF4Ep7NMUVOvjXwWd5s4DNCbjCJsXiSstPiiW2gpWHHIKJ3nm0R08yRYhBVLe4TYf4Cpk+HI62H/dIAAAAASUVORK5CYII= 2x"
+          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADEAAAAxCAMAAABEQrEuAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAJcEhZcwAACxMAAAsTAQCanBgAAAByUExURUdwTOrYee/Xd+zZeefXd+3aet/PcOvZeevXd+/PcOvXd+/fgO3ZeevYeOzZeezZeezaee3aeerXeO3beurYeOzXeOzZeezYeOraeuvZeeraderZeezYeOnZee3YeOvYeOzXeOzZeevZee3aeuzaeuzZeWm2oqkAAAAldFJOUwBwIM8gbxDfQBCAEN+Q76+/j2B/kGBfvzDPMKCfUN+woKCAn583cFRTAAABV0lEQVQYGZXBh3KrMABFwQMIJNHc7fS8kvv/vxiBE8JM0CB2iTjqyibeynoSlP88o5OkmpE/lcS1so4gV9DnBM6qJU7BCXjWYAf+oIA4DezTq+4uzmrgiTFaZoh50DLDL56R0zLHwHsmuVTsz6U7aNnBXc67VvJ8a3olMUw6pXjhh1MKx8xe6wrmMq27MtdoHXO+1LrM88WU+15J9mUOlK22sBk7bVNgrLawBkyhdI8VQfNXqf5U3NVK0zFRGiYHpTlx5/8r1Ycn8I9KV+SQW21hcwpt805mtcVbBpjypiT9rTR8qTKtyyrmtM4zd9S6jLlC6/bMOKVw/HhWio5JriS951sjve3OF9dpWefK862QDJOqYuC0zDGq+MVo2RMxRssMMY0G1h119/pgNSBOQVfBToMXoFZAXCvrCEyvwBA4q5a4rK4Y1ZJqRk2dkaCxshWbHHVl2SeJLNUKuvpL/wAAAABJRU5ErkJggg=="
+          alt="star"
+          width="49"
+          height="49"
         />
-      </a>
+        <p class="hero-star-text">all embroidery is made by hand</p>
+      </div>
+      <div class="swiper hero-swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <picture>
+              <source
+                media="(min-width: 1280px)"
+                srcset="/craft/assets/hero-girl-1-desktopmax@1x-DBJqu5_h.webp 1x, /craft/assets/hero-girl-1-desktopmax@1x-DBJqu5_h.webp 2x"
+                type="image/jpg"
+              />
+              <source
+                media="(min-width: 768px)"
+                srcset="/craft/assets/hero-girl-1-desktopmax@1x-DBJqu5_h.webp 1x, /craft/assets/hero-girl-1-desktopmax@1x-DBJqu5_h.webp 2x"
+                type="image/jpg"
+              />
+              <source
+                media="(min-width: 375px)"
+                srcset="/craft/assets/hero-girl-1-desktopmax@1x-DBJqu5_h.webp 1x, /craft/assets/hero-girl-1-desktopmax@1x-DBJqu5_h.webp 2x"
+                type="image/jpg"
+              />
+              <source
+                media="(min-width: 320px)"
+                srcset="/craft/assets/hero-girl-1-desktopmax@1x-DBJqu5_h.webp 1x, /craft/assets/hero-girl-1-desktopmax@1x-DBJqu5_h.webp 2x"
+                type="image/jpg"
+              />
+              <img
+                class="girl-img"
+                src="/craft/assets/hero-girl-1-desktopmax@1x-DBJqu5_h.webp"
+                alt="White Vyshyvanka"
+                width="392"
+                height="545"
+                loading="lazy"
+              />
+            </picture>
+          </div>
+          <div class="swiper-slide">
+            <picture>
+              <source
+                media="(min-width: 1280px)"
+                srcset="/craft/assets/hero-Ev1J-wka.webp 1x, /craft/assets/hero-Ev1J-wka.webp 2x"
+                type="image/jpg"
+              />
+              <source
+                media="(min-width: 768px)"
+                srcset="/craft/assets/hero-Ev1J-wka.webp 1x, /craft/assets/hero-Ev1J-wka.webp 2x"
+                type="image/jpg"
+              />
+              <source
+                media="(min-width: 375px)"
+                srcset="/craft/assets/hero-Ev1J-wka.webp 1x, /craft/assets/hero-Ev1J-wka.webp 2x"
+                type="image/jpg"
+              />
+              <source
+                media="(min-width: 320px)"
+                srcset="/craft/assets/hero-Ev1J-wka.webp 1x, /craft/assets/hero-Ev1J-wka.webp 2x"
+                type="image/jpg"
+              />
+              <img
+                class="girl-img"
+                src="/craft/assets/hero-Ev1J-wka.webp"
+                alt="Vyshyvanka"
+                width="392"
+                height="545"
+                loading="lazy"
+              />
+            </picture>
+          </div>
+        </div>
+      </div>
     </div>
-    <h1 class="main-title">
-      <span class="main-title-gradient">Vite</span>
-      Template by
-      <a
-        class="main-title-link"
-        href="https://github.com/goitacademy/vanilla-app-template"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        GoIT
-      </a>
-    </h1>
   </div>
 </section>
 
-      <article class="badges">
+      <section class="about-us section" id="about-us">
   <div class="container">
-    <ul class="badges-list">
-      <li class="badges-item">
-        <a
-          class="badges-link"
-          href="https://www.npmjs.com/package/vite-plugin-html-inject"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          HTML Inject
-        </a>
+    <div class="about-us-inner">
+      <div class="about-us-content " data-aos="fade-right" data-aos-duration="1000">
+        <h2 class="about-us-title">About Me</h2>
+        <p class="about-us-text">
+          When I embroider, I feel a deep sense of calm and focus.Each stitch becomes a part of my soul,
+          and the colors bring to life the emotions I want to convey.Embroidery gives me a sense of creative flow,
+          allowing me to forget about everyday worries.
+        </p>
+        <p class="about-us-text">
+          Always, while working, I feel joy and inspiration as I see my ideas come to life.
+          Each new piece brings me satisfaction and pride in the result,and the process of embroidery becomes a way to express my feelings and experiences.
+        </p>
+      </div>
+      <div class="about-us-box-img">
+        <!-- Slider main container -->
+        <div class="swiper about-us-swiper">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper about-us-swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide about-us-swiper-slide">
+              <picture>
+                <source
+                  media="(min-width: 1440px)"
+                  srcset="/craft/assets/hero-girl-2-desktopmax@1x-CK93Zc_J.webp 1x, /craft/assets/hero-girl-2-desktopmax@1x-CK93Zc_J.webp 2x"
+                  type="image/jpg"
+                />
+                <source
+                  media="(min-width: 1280px)"
+                  srcset="/craft/assets/hero-girl-2-desktopmax@1x-CK93Zc_J.webp 1x, /craft/assets/hero-girl-2-desktopmax@1x-CK93Zc_J.webp 2x"
+                  type="image/jpg"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="/craft/assets/hero-girl-2-desktopmax@1x-CK93Zc_J.webp 1x, /craft/assets/hero-girl-2-desktopmax@1x-CK93Zc_J.webp 2x"
+                  type="image/jpg"
+                />
+                <source
+                  media="(min-width: 375px)"
+                  srcset="/craft/assets/hero-girl-2-desktopmax@1x-CK93Zc_J.webp 1x, /craft/assets/hero-girl-2-desktopmax@1x-CK93Zc_J.webp 2x"
+                  type="image/jpg"
+                />
+                <source
+                  media="(min-width: 320px)"
+                  srcset="/craft/assets/hero-girl-2-desktopmax@1x-CK93Zc_J.webp 1x, /craft/assets/hero-girl-2-desktopmax@1x-CK93Zc_J.webp 2x"
+                  type="image/jpg"
+                />
+                <img
+                  class="about-us-img"
+                  src="/craft/assets/hero-girl-2-desktopmax@1x-CK93Zc_J.webp"
+                  alt="White Vyshyvanka"
+                  width="709"
+                  height="545"
+                  loading="lazy"
+                />
+              </picture>
+            </div>
+            <div class="swiper-slide about-us-swiper-slide">
+              <picture>
+                <source
+                  media="(min-width: 1440px)"
+                  srcset="/craft/assets/children-BdqIe5xa.webp 1x, /craft/assets/children-BdqIe5xa.webp 2x"
+                  type="image/jpg"
+                />
+                <source
+                  media="(min-width: 1280px)"
+                  srcset="/craft/assets/children-BdqIe5xa.webp 1x, /craft/assets/children-BdqIe5xa.webp 2x"
+                  type="image/jpg"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="/craft/assets/children-BdqIe5xa.webp 1x, /craft/assets/children-BdqIe5xa.webp 2x"
+                  type="image/jpg"
+                />
+                <source
+                  media="(min-width: 375px)"
+                  srcset="/craft/assets/children-BdqIe5xa.webp 1x, /craft/assets/children-BdqIe5xa.webp 2x"
+                  type="image/jpg"
+                />
+                <source
+                  media="(min-width: 320px)"
+                  srcset="/craft/assets/children-BdqIe5xa.webp 1x, /craft/assets/children-BdqIe5xa.webp 2x"
+                  type="image/jpg"
+                />
+                <img
+                  class="about-us-img"
+                  src="/craft/assets/children-BdqIe5xa.webp"
+                  alt="White Vyshyvanka"
+                  width="709"
+                  height="545"
+                  loading="lazy"
+                />
+              </picture>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <!--  ==================== OUR COLLECTION ====================  -->
+<section class="collection section" id="our-collection">
+  <div class="container-collection container">
+    <h2 class="title-our-collection">My works</h2>
+    <ul class="list-cards-collection">
+      <li class="item-cards-collection">
+        <div class="container-image-cards-collection">
+          <picture class="image-cards-collection">
+            <source
+              media="(min-width: 768px)"
+              srcset="/craft/assets/photo1-Ch6H1GQn.jpg 1x, /craft/assets/photo1-Ch6H1GQn.jpg 2x"
+              type="image/jpg"
+            />
+            <source
+              media="(min-width: 375px)"
+              srcset="/craft/assets/photo1-Ch6H1GQn.jpg 1x, /craft/assets/photo1-Ch6H1GQn.jpg 2x"
+              type="image/jpg"
+            />
+            <source
+              media="(min-width: 320px)"
+              srcset="/craft/assets/photo1-Ch6H1GQn.jpg 1x, /craft/assets/photo1-Ch6H1GQn.jpg 2x"
+              type="image/jpg"
+            />
+            <img
+              src="/craft/assets/photo1-Ch6H1GQn.jpg"
+              alt="embroidered shirt"
+              width="342"
+              height="430"
+              loading="lazy"
+            />
+          </picture>
+        </div>
+        </li>
+
+      <li class="item-cards-collection">
+        <div class="container-image-cards-collection">
+          <picture class="image-cards-collection">
+            <source
+              media="(min-width: 768px)"
+              srcset="/craft/assets/photo4-DTyp_2dB.jpg 1x, /craft/assets/photo4-DTyp_2dB.jpg 2x"
+              type="image/jpg"
+            />
+            <source
+              media="(min-width: 375px)"
+              srcset="/craft/assets/photo4-DTyp_2dB.jpg 1x, /craft/assets/photo4-DTyp_2dB.jpg 2x"
+              type="image/jpg"
+            />
+            <source
+              media="(min-width: 320px)"
+              srcset="/craft/assets/photo4-DTyp_2dB.jpg 1x, /craft/assets/photo4-DTyp_2dB.jpg 2x"
+              type="image/jpg"
+            />
+            <img
+              src="/craft/assets/photo4-DTyp_2dB.jpg"
+              alt="embroidered shirt"
+              width="342"
+              height="430"
+              loading="lazy"
+            />
+          </picture>
+        </div>
+
       </li>
-      <li class="badges-item">
-        <a
-          class="badges-link"
-          href="https://www.npmjs.com/package/vite-plugin-full-reload"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Full Reload
-        </a>
+      <li class="item-cards-collection">
+        <div class="container-image-cards-collection">
+          <picture class="image-cards-collection">
+            <source
+              media="(min-width: 768px)"
+              srcset="/craft/assets/flower-CzCb2DOx.jpg 1x, /craft/assets/flower-CzCb2DOx.jpg 2x"
+              type="image/jpg"
+            />
+            <source
+              media="(min-width: 375px)"
+              srcset="/craft/assets/flower-CzCb2DOx.jpg 1x, /craft/assets/flower-CzCb2DOx.jpg 2x"
+              type="image/jpg"
+            />
+            <source
+              media="(min-width: 320px)"
+              srcset="/craft/assets/flower-CzCb2DOx.jpg 1x, /craft/assets/flower-CzCb2DOx.jpg 2x"
+              type="image/jpg"
+            />
+            <img
+              src="/craft/assets/flower-CzCb2DOx.jpg"
+              alt="embroidered shirt"
+              width="342"
+              height="430"
+              loading="lazy"
+            />
+          </picture>
+        </div>
+
       </li>
-      <li class="badges-item">
-        <a
-          class="badges-link"
-          href="https://www.npmjs.com/package/postcss-sort-media-queries"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Sort Media Queries
-        </a>
+      <li class="item-cards-collection">
+        <div class="container-image-cards-collection">
+          <picture class="image-cards-collection">
+            <source
+              media="(min-width: 768px)"
+              srcset="/craft/assets/photo5-BRmYKfxi.jpg 1x, /craft/assets/photo5-BRmYKfxi.jpg 2x"
+              type="image/jpg"
+            />
+            <source
+              media="(min-width: 375px)"
+              srcset="/craft/assets/photo5-BRmYKfxi.jpg 1x, /craft/assets/photo5-BRmYKfxi.jpg 2x"
+              type="image/jpg"
+            />
+            <source
+              media="(min-width: 320px)"
+              srcset="/craft/assets/photo5-BRmYKfxi.jpg 1x, /craft/assets/photo5-BRmYKfxi.jpg 2x"
+              type="image/jpg"
+            />
+            <img
+              src="/craft/assets/photo5-BRmYKfxi.jpg"
+              alt="embroidered shirt"
+              width="342"
+              height="430"
+              loading="lazy"
+            />
+          </picture>
+        </div>
+
+      </li>
+      <li class="item-cards-collection">
+        <div class="container-image-cards-collection">
+          <picture class="image-cards-collection">
+            <source
+              media="(min-width: 768px)"
+              srcset="/craft/assets/peonys-C2exy5FG.jpg 1x, /craft/assets/peonys-C2exy5FG.jpg 2x"
+              type="image/jpg"
+            />
+            <source
+              media="(min-width: 375px)"
+              srcset="/craft/assets/peonys-C2exy5FG.jpg 1x, /craft/assets/peonys-C2exy5FG.jpg 2x"
+              type="image/jpg"
+            />
+            <source
+              media="(min-width: 320px)"
+              srcset="/craft/assets/peonys-C2exy5FG.jpg 1x, /craft/assets/peonys-C2exy5FG.jpg 2x"
+              type="image/jpg"
+            />
+            <img
+              src="/craft/assets/peonys-C2exy5FG.jpg"
+              alt="embroidered shirt"
+              width="342"
+              height="430"
+              loading="lazy"
+            />
+          </picture>
+        </div>
+      </li>
+      <li class="item-cards-collection">
+        <div class="container-image-cards-collection">
+          <picture class="image-cards-collection">
+            <source
+              media="(min-width: 768px)"
+              srcset="/craft/assets/hands-Cc7YlRej.jpg 1x, /craft/assets/hands-Cc7YlRej.jpg 2x"
+              type="image/jpg"
+            />
+            <source
+              media="(min-width: 375px)"
+              srcset="/craft/assets/hands-Cc7YlRej.jpg 1x, /craft/assets/hands-Cc7YlRej.jpg 2x"
+              type="image/jpg"
+            />
+            <source
+              media="(min-width: 320px)"
+              srcset="/craft/assets/hands-Cc7YlRej.jpg 1x, /craft/assets/hands-Cc7YlRej.jpg 2x"
+              type="image/jpg"
+            />
+            <img
+              src="/craft/assets/hands-Cc7YlRej.jpg"
+              alt="embroidered shirt"
+              width="342"
+              height="430"
+              loading="lazy"
+            />
+          </picture>
+        </div>
       </li>
     </ul>
   </div>
-</article>
 
-    </main>
+  <!-- ==================== SWIPER OUR COLLECTION ==================== -->
+  <div class="container-swiper-collection container">
+    <h2 class="title-our-collection">My works</h2>
+    <div class="swiper swiper-collection">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide">
+          <ul class="list-swiper-collection">
+            <li class="item-swiper-collection">
+              <div class="container-image-cards-collection">
+                <picture>
+                  <source
+                    media="(min-width: 1440px)"
+                    srcset="/craft/assets/photo1-Ch6H1GQn.jpg 1x, /craft/assets/photo1-Ch6H1GQn.jpg 2x"
+                    type="image/jpg"
+                  />
+                  <source
+                    media="(min-width: 1280px)"
+                    srcset="/craft/assets/photo1-Ch6H1GQn.jpg 1x, images/our-collection/photo1.jpg2x"
+                    type="image/jpg"
+                  />
+                  <img
+                    src="/craft/assets/photo1-Ch6H1GQn.jpg"
+                    alt="embroidered shirt"
+                    width="400"
+                    height="430"
+                    loading="lazy"
+                  />
+                </picture>
+              </div>
 
-    <footer class="footer">
+              <a target="_blank" href="" class="link-item-cards-collection"></a>
+            </li>
+            <li class="item-swiper-collection">
+              <div class="container-image-cards-collection">
+                <picture>
+                  <source
+                    media="(min-width: 1440px)"
+                    srcset="/craft/assets/photo4-DTyp_2dB.jpg 1x, /craft/assets/photo4-DTyp_2dB.jpg 2x"
+                    type="image/jpg"
+                  />
+                  <source
+                    media="(min-width: 1280px)"
+                    srcset="/craft/assets/photo4-DTyp_2dB.jpg 1x, /craft/assets/photo4-DTyp_2dB.jpg 2x"
+                    type="image/jpg"
+                  />
+                  <img
+                    src="/craft/assets/photo4-DTyp_2dB.jpg"
+                    alt="embroidered shirt"
+                    width="400"
+                    height="430"
+                    loading="lazy"
+                  />
+                </picture>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="swiper-slide">
+          <ul class="list-swiper-collection">
+            <li class="item-swiper-collection">
+              <div class="container-image-cards-collection">
+                <picture>
+                  <source
+                    media="(min-width: 1440px)"
+                    srcset="/craft/assets/photo5-BRmYKfxi.jpg 1x, /craft/assets/photo5-BRmYKfxi.jpg 2x"
+                    type="image/jpg"
+                  />
+                  <source
+                    media="(min-width: 1280px)"
+                    srcset="/craft/assets/photo5-BRmYKfxi.jpg 1x, /craft/assets/photo5-BRmYKfxi.jpg 2x"
+                    type="image/jpg"
+                  />
+                  <img
+                    src="/craft/assets/photo5-BRmYKfxi.jpg"
+                    alt="embroidered shirt"
+                    width="400"
+                    height="430"
+                    loading="lazy"
+                  />
+                </picture>
+              </div>
+            </li>
+            <li class="item-swiper-collection">
+              <div class="container-image-cards-collection">
+                <picture>
+                  <source
+                    media="(min-width: 1440px)"
+                    srcset="/craft/assets/angel-D0kw49po.jpg 1x, /craft/assets/angel-D0kw49po.jpg 2x"
+                    type="image/jpg"
+                  />
+                  <source
+                    media="(min-width: 1280px)"
+                    srcset="/craft/assets/angel-D0kw49po.jpg 1x, /craft/assets/angel-D0kw49po.jpg 2x"
+                    type="image/jpg"
+                  />
+                  <img
+                    src="/craft/assets/angel-D0kw49po.jpg"
+                    alt="embroidered shirt"
+                    width="400"
+                    height="430"
+                    loading="lazy"
+                  />
+                </picture>
+              </div>
+
+            </li>
+          </ul>
+        </div>
+        <div class="swiper-slide">
+          <ul class="list-swiper-collection">
+            <li class="item-swiper-collection">
+              <div class="container-image-cards-collection">
+                <picture>
+                  <source
+                    media="(min-width: 1440px)"
+                    srcset="/craft/assets/hands-Cc7YlRej.jpg 1x, /craft/assets/hands-Cc7YlRej.jpg 2x"
+                    type="image/jpg"
+                  />
+                  <source
+                    media="(min-width: 1280px)"
+                    srcset="/craft/assets/hands-Cc7YlRej.jpg 1x, /craft/assets/hands-Cc7YlRej.jpg 2x"
+                    type="image/jpg"
+                  />
+                  <img
+                    src="/craft/assets/hands-Cc7YlRej.jpg"
+                    alt="embroidered shirt"
+                    width="400"
+                    height="430"
+                    loading="lazy"
+                  />
+                </picture>
+              </div>
+
+            </li>
+            <li class="item-swiper-collection">
+              <div class="container-image-cards-collection">
+                <picture>
+                  <source
+                    media="(min-width: 1440px)"
+                    srcset="/craft/assets/peonys-C2exy5FG.jpg 1x, /craft/assets/peonys-C2exy5FG.jpg 2x"
+                    type="image/jpg"
+                  />
+                  <source
+                    media="(min-width: 1280px)"
+                    srcset="images/our-collection/peonys.jpg1x, /craft/assets/peonys-C2exy5FG.jpg 2x"
+                    type="image/jpg"
+                  />
+                  <img
+                    src="/craft/assets/peonys-C2exy5FG.jpg"
+                    alt="embroidered shirt"
+                    width="400"
+                    height="430"
+                    loading="lazy"
+                  />
+                </picture>
+              </div>
+
+            </li>
+          </ul>
+        </div>
+        
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <section class="your-order section">
   <div class="container">
-    <p class="footer-desc">
-      Made with ✨ by
-      <a
-        class="footer-link"
-        href="https://goit.global/ua/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        GoIT team
-      </a>
-    </p>
+    <div class="order-bg"></div>
+    <div class="your-order-wrapper">
+      <div class="order-form-wrapper" id="your-order">
+        <h2 class="section-title-my">
+          Bead Embroidery Advantages</h2>
+        <ul class="advantages-list">
+            <li data-aos="fade-down" data-aos-delay="0">Visual Appeal</li>
+            <li data-aos="fade-down" data-aos-delay="60">Durability</li>
+            <li data-aos="fade-down" data-aos-delay="90">Uniqueness</li>
+            <li data-aos="fade-down" data-aos-delay="120">Therapeutic Effect</li>
+            <li data-aos="fade-down" data-aos-delay="150">Ability to Create Three-Dimensional Designs</li>
+        </ul>
+
+      </div>
+      <div class="order-img-container">
+        <div class="swiper order-swiper">
+          <div class="swiper-wrapper order-swiper-wrapper">
+            <div class="swiper-slide order-swiper-slide">
+              <picture>
+                <source
+                  media="(min-width: 1440px)"
+                  srcset="/craft/assets/girl-C5Ns2Qsq.jpg 1x, /craft/assets/girl-C5Ns2Qsq.jpg 2x"
+                  type="image/jpg"
+                />
+                <source
+                  media="(min-width: 1280px)"
+                  srcset="/craft/assets/girl-C5Ns2Qsq.jpg 1x, /craft/assets/girl-C5Ns2Qsq.jpg 2x"
+                  type="image/jpg"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="/craft/assets/girl-C5Ns2Qsq.jpg 2x"
+                  type="image/jpg"
+                />
+                <img
+                  class="order-img"
+                  src="/craft/assets/girl-C5Ns2Qsq.jpg"
+                  alt="Vyshyvanka1"
+                  width="704"
+                  height="521"
+                  loading="lazy"
+                />
+              </picture>
+            </div>
+            <div class="swiper-slide order-swiper-slide">
+              <picture>
+                <source
+                  media="(min-width: 1440px)"
+                  srcset="/craft/assets/girl1-2TOEiIRB.jpg 1x, /craft/assets/girl1-2TOEiIRB.jpg 2x"
+                  type="image/jpg"
+                />
+                <source
+                  media="(min-width: 1280px)"
+                  srcset="/craft/assets/girl1-2TOEiIRB.jpg 1x, /craft/assets/girl1-2TOEiIRB.jpg 2x"
+                  type="image/jpg"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="/craft/assets/girl1-2TOEiIRB.jpg 2x"
+                  type="image/jpg"
+                />
+                <img
+                  class="order-img"
+                  src="/craft/assets/girl1-2TOEiIRB.jpg"
+                  alt="Vyshyvanka2"
+                  width="704"
+                  height="521"
+                  loading="lazy"
+                />
+              </picture>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <!-- <section class="testimonials section" id="testimonials">
+  
+</section>
+ -->
+    </main>
+    <footer class="section-footer">
+  <div class="container-footer container">
+    <nav class="footer-page-nav">
+      <ul class="footer-menu">
+        <li class="footer-menu-item">
+          <a class="footer-menu-link" href="#about-us">About Me</a>
+        </li>
+        <li class="footer-menu-item">
+          <a class="footer-menu-link" href="#our-collection">My works</a>
+        </li>
+      
+      </ul>
+    </nav>
+    <h2 class="slogan">
+      A touch of <span class="span-slogan">Ukrainian</span> culture in every
+      embroidery
+    </h2>
   </div>
 </footer>
 
+    <div class="scroll-up">
+  <svg class="scroll-up-svg" viewBox="-2 -2 52  52">
+    <path
+      class="scroll-up-svg-path"
+      d="M24,0 a24,24 0 0,1 0,48 a24,24 0 0,1 0,-48"
+    />
+  </svg>
+</div>
 
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+      <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+      <script>
+        AOS.init();
+      </script>
   </body>
 </html>
