@@ -1,8 +1,11 @@
 import { defineConfig } from 'vite';
 import { glob } from 'glob';
+import { join } from 'path';
 import injectHTML from 'vite-plugin-html-inject';
 import FullReload from 'vite-plugin-full-reload';
 import SortCss from 'postcss-sort-media-queries';
+
+const htmlFiles = glob.sync(join(__dirname, 'src', '**', '*.html'));
 
 export default defineConfig(({ command }) => {
   return {
@@ -13,7 +16,7 @@ export default defineConfig(({ command }) => {
     build: {
       sourcemap: true,
       rollupOptions: {
-        input: glob.sync('./src/index.html'),
+        input: htmlFiles,
         output: {
           manualChunks(id) {
             if (id.includes('node_modules')) {
@@ -44,5 +47,8 @@ export default defineConfig(({ command }) => {
         sort: 'mobile-first',
       }),
     ],
+    optimizeDeps: {
+      include: ['crafty'],
+    },
   };
 });
